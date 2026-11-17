@@ -65,25 +65,53 @@ print(perro[0]) #Imprime: Scooby Doo
 #🗂️ Diccionarios: Nos permite almacenar contenido a través de una llave y un valor. Podemos acceder a sus datos a través de su índice único (que en este caso llamaremos llave o clave). Encuentra algunos métodos integrados de los diccionarios aquí.
 
 #diccionario_vacio = {}
-#persona = {'nombre': 'Carmen', 'edad': 31, 'altura': 1.71, 'usa_lentes': False}
-#persona['nombre'] = 'Valeria'  # Actualiza si el valor de la llave existente
-#persona['hobbies'] = ['jugar videojuegos', 'programación'] 
+#Forma de almacenar datos en un diccionario:{`llave`: `valor`}
+#JSON --> es un tipo de dato que se utiliza para almacenar informacion en un formato de texto plano.
+#Es muy utilizado en la web para intercambiar infotmacion entre el liente y el servidor
+
+
+persona = {
+    'nombre': 'Carmen', 
+    'edad': 31, 
+    'altura': 1.71,
+    'usa_lentes': False
+    }
+
+persona['nombre'] = 'Valeria'  # Actualiza si el valor de la llave existente
+persona['hobbies'] = ['jugar videojuegos', 'programación'] 
+
+#Incorporar dos nuevas llaves a persona. Profesion, comida favorita, mascotas, peliculas favoritas.
+
+persona['Profesion'] = ['Profesora', 'marketing'] 
+persona['comida_favorita'] = ['Lasaña', 'Asado'] 
+persona['mascotas'] = ['Gatos', 'Perros','loro'] 
+persona['peliculas_favorita'] = ['Buscando a nemo', 'Luca', 'Rapido y furioso'] 
+
+#Imprimir el diccionario completo
+
+print(persona)
+
+
 
 # Agrega esa clave-valor si no existía previamente
 #print(persona)
 
 # Imprime: {'nombre': 'Carmen', 'edad': 31, 'altura': 1.71, 'usa_lentes': False, 'hobbies': ['jugar videojuegos', 'programación']}
-#altura = persona.pop('altura')  # Elimina la clave indicada y devuelve el valor
-#print(altura)    # Imprime: 1.71
-#print(persona) 
+altura = persona.pop('altura')  # Elimina la clave indicada y devuelve el valor
+print(altura)    # Imprime: 1.71
+print(persona) 
 
 # salida: {'nombre': 'Carmen', 'edad': 31, 'usa_lentes': False, 'hobbies': ['jugar videojuegos', 'programación']} 
+
 #⚙️ Funciones comunes
-#En caso de no conocer el tipo de dato de una variable o valor, gracias a la función type podemos saberlo fácilmente. Por ejemplo:
+#En caso de no conocer el tipo de dato de una variable o valor, gracias a la función type podemos saberlo fácilmente. 
 
-#print(type(3.1416)) #Imprime: <class 'float'>
-#print(type(persona)) #Imprime <class 'dict'>
-#En tipos de datos que tienen tamaño (por ejemplo: listas, tuplas, diccionarios, cadenas), podemos usar la función len, que es diminutivo de length (tamaño en español) y que nos regresa la longitud de este.
+# Por ejemplo:
+print(type(3.1416)) #Imprime: <class 'float'> --->Type para saber el tipo de dato
+print(type(persona)) #Imprime <class 'dict'>
+#En tipos de datos que tienen tamaño (por ejemplo: listas, tuplas, diccionarios, cadenas),
+#podemos usar la función len, 
+#que es diminutivo de length (tamaño en español) y que nos regresa la longitud de este.
 
-#print(len(persona)) #Imprime: 4 (la cantidad de pares de clave-valor)
-#print(len("Me encanta programar")) #Imprime: 20
+print(len(persona)) #Imprime: 4 (la cantidad de pares de clave-valor)
+print(len("Me encanta programar")) #Imprime: 20
